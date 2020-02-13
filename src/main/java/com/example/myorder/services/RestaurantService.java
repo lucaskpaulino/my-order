@@ -34,19 +34,20 @@ public class RestaurantService {
 
     }
 
-    public RestaurantResponseDto getById(){
-        return restaurantRepository.findById(id){
-            Optional<Restaurant> optional = restaurant.findById(id);
+    public RestaurantResponseDto getById(Integer id) {
+        Optional<Restaurant> optional = restaurantRepository.findById(id);
+
+        if(optional.isPresent()) {
+
             Restaurant restaurant = optional.get();
             return new RestaurantResponseDto()
                     .setId(restaurant.getId())
-                    .setName(restaurant.getName()
                     .setEmail(restaurant.getEmail())
+                    .setName(restaurant.getName())
                     .setPhone(restaurant.getPhone());
-
         }
 
+        return null;
     }
-
 
 }

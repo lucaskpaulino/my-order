@@ -9,12 +9,10 @@ import org.modelmapper.ModelMapper;
 public class UserMapper {
     private static final ModelMapper modelMapper = new ModelMapper();
 
-    public static User toEntity(CreateUserDto createUserDto){
+    public static User toEntity(CreateUserDto createUserDto) {
         return modelMapper.map(createUserDto, User.class);
     }
-
-    public static UserResponseDto toResponseDto(User user){
-
-        return modelMapper.map(user, User.class);
+    public static UserResponseDto toResponseDto(User user) {
+        return modelMapper.map(user, UserResponseDto.class);
     }
 }
