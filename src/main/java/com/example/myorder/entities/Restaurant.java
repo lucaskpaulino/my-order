@@ -1,23 +1,24 @@
 package com.example.myorder.entities;
 
-
-import com.example.myorder.api.dtos.CreateRestaurantDto;
-import org.hibernate.annotations.Table;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-
+@Table(name = "RESTAURANT")
 public class Restaurant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name= "NAME", nullable = false)
+    @Column(name = "NAME", nullable = false)
     private String name;
 
-    @Column
+    @Column(name = "PHONE", nullable = false)
     private String phone;
 
     @Column(name = "EMAIL", nullable = false)

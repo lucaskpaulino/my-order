@@ -1,11 +1,9 @@
 package com.example.myorder.repositories;
 
-import com.example.myorder.entities.Restaurant;
+import com.example.myorder.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-
 @Repository
-public interface RestaurantRepository extends JpaRepository<Restaurant, Integer> {
-
+public interface ProductRepository extends JpaRepository<Product, Integer> {
 }
