@@ -35,7 +35,7 @@ public class UserController {
     @ResponseStatus(HttpStatus.OK)
     @GetMapping()
     public UserResponseDto get(@RequestParam @Param("id") Integer id) {
-        return userService.findById(id);
+        return userService.findUserById(id);
     }
 
     @ResponseStatus(HttpStatus.OK)
